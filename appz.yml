@@ -1,0 +1,32 @@
+app:
+    name: PHPLaravel
+    code: LARAVEL
+    notify: nsrahul@ecloudcontrol.com
+build:
+    version: 8.1
+    env: DEV
+    build_file: none
+    output_files: output/*.zip
+    image_template: php_laravel-8.1
+deploy:
+    context: jw/DEV
+    type: deployment
+    replicas: 1
+    port:
+    - 80
+volumes:
+  - claim: laravel-storage
+    mount: /var/www/html/storage
+    name: storage
+    size: 5Gi
+properties:
+    APP_KEY:
+      vault: LARAVEL_APP_KEY
+    DB_CONNECTION: mysql
+    DB_HOST: mysql
+    DB_PORT: 3306
+    DB_DATABASE: laravel
+    DB_USERNAME: laravel_user
+    DB_PASSWORD:
+      vault: LARAVEL_DB_PASSWORD
+    revision: 1
