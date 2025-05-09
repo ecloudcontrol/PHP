@@ -7,7 +7,7 @@ build:
     env: DEV
     build_file: none
     output_files: output/*.zip
-    image_template: php_laravel-8.1
+    image_template: phplaravel-8.1
 deploy:
     context: jw/DEV
     type: deployment
