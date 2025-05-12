@@ -30,4 +30,4 @@ properties:
     DB_USERNAME: laravel_user
     DB_PASSWORD:
       vault: LARAVEL_DB_PASSWORD
-    revision: 6
+    revision: 7
