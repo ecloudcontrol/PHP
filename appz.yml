@@ -5,8 +5,6 @@ app:
 build:
     version: 8.1
     env: POC
-    args:
-      WORK_DIR: "/appz/server/"
     build_file: none
     output_files: output/*.zip
     image_template: phplaravel-8.1
