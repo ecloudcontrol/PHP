@@ -10,15 +10,15 @@ build:
     image_template: phplaravel-8.1
 deploy:
     context: alpha/POC
+    type: statefulset
     replicas: 1
-    strategy : rolling
     port:
-    - 8000
-# volumes:
-#   - claim: laravel-storage
-#     mount: /var/www/html/storage
-#     name: storage
-#     size: 5Gi
+    - 80
+volumes:
+  - claim: laravel-storage
+    mount: /var/www/html/storage
+    name: storage
+    size: 5Gi
 properties:
     APP_KEY:
       vault: LARAVEL_APP_KEY
@@ -29,4 +29,4 @@ properties:
     DB_USERNAME: laravel_user
     DB_PASSWORD:
       vault: LARAVEL_DB_PASSWORD
-    revision: 3
+    revision: 2
