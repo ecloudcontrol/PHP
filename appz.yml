@@ -28,4 +28,4 @@ properties:
     DB_DATABASE: IMS
     DB_USERNAME: pocuser
     DB_PASSWORD: pocpassword
-    revision: 9
+    revision: 10
