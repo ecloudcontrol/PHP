@@ -19,6 +19,7 @@ volumes:
     mount: /var/www/html/storage
     name: storage
     size: 5Gi
+    matchLabels: false
 properties:
     APP_KEY:
       vault: LARAVEL_APP_KEY
