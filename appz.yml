@@ -1,7 +1,7 @@
 app:
     name: PHPLaravel
     code: LARAVEL
-    notify: nsrahul@ecloudcontrol.com
+    notify: apaul@maximaconsulting.com
 build:
     version: 8.1
     env: POC
