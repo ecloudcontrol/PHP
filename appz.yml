@@ -1,7 +1,7 @@
 app:
     name: PHPLaravel
     code: LARAVEL
-    notify: nsrahul@ecloudcontrol.com
+    notify: srswain@ecloudcontrol.com
 build:
     version: 8.1
     env: POC
@@ -29,4 +29,4 @@ properties:
     DB_USERNAME: laravel_user
     DB_PASSWORD:
       vault: LARAVEL_DB_PASSWORD
-    revision: 10
+    revision: 0
