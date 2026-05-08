@@ -3,7 +3,7 @@ app:
     code: LARAVEL
     notify: nsrahul@ecloudcontrol.com
 build:
-    version: 8.1
+    version: 8.4
     env: POC
     build_file: none
     output_files: output/*.zip
