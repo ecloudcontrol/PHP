@@ -7,9 +7,9 @@ build:
     env: POC
     build_file: none
     output_files: output/*.zip
-    image_template: phplaravel-8.1
+    image_template: phpfpm-8.4
 deploy:
-    context: alpha/POC
+    context: plantmaster/DEV
     type: statefulset
     replicas: 1
     port:
