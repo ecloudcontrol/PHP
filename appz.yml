@@ -1,10 +1,10 @@
 app:
-    name: PHPLaravel
-    code: LARAVEL
-    notify: nsrahul@ecloudcontrol.com
+    name: PHP
+    code: php
+    notify: rniranjan@ecloudcontrol.com
 build:
     version: 8.4
-    env: POC
+    env: DEV
     build_file: none
     output_files: output/*.zip
     image_template: phpfpm-8.4
@@ -14,19 +14,20 @@ deploy:
     replicas: 1
     port:
     - 80
+    
 volumes:
-  - claim: laravel-storage
-    mount: /var/www/html/storage
-    name: storage
+  - claim: php-data
+    mount: /appz/data
+    name: data
     size: 5Gi
+    matchLabels: false
 properties:
-    APP_KEY:
-      vault: LARAVEL_APP_KEY
     DB_CONNECTION: mysql
-    DB_HOST: mysql
+    DB_HOST: mariadb-master-11-4
+    DB_HOST_READ: mariadb-slave-11-4
     DB_PORT: 3306
-    DB_DATABASE: laravel
-    DB_USERNAME: laravel_user
-    DB_PASSWORD:
-      vault: LARAVEL_DB_PASSWORD
-    revision: 10
+    DB_DATABASE: wordpress
+    DB_USERNAME: wordpress
+    MYSQL_PASSWORD:
+      vault: MYSQL_PASSWORD_KEY
+    revision: 0
