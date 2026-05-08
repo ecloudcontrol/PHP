@@ -30,4 +30,4 @@ properties:
     DB_USERNAME: wordpress
     MYSQL_PASSWORD:
       vault: MYSQL_PASSWORD_KEY
-    revision: 2
+    revision: 1
