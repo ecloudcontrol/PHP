@@ -23,6 +23,10 @@ volumes:
     matchLabels: false
 properties:
     DB_CONNECTION: mysql
+    DATABASE_USERNAME: plantmaster
+    DATABASE_PASSWORD:
+      vault: DATABASE_PASSWORD
+    DATABASE: plantmaster
     DB_HOST: mariadb-master-11-4
     DB_HOST_READ: mariadb-slave-11-4
     DB_PORT: 3306
