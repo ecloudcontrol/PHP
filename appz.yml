@@ -14,12 +14,6 @@ deploy:
     port:
     - 80
     
-volumes:
-  - claim: php-data
-    mount: /appz/data
-    name: data
-    size: 5Gi
-    matchLabels: false
 properties:
     DB_CONNECTION: mysql
     DATABASE_USERNAME: plantmaster
