@@ -27,4 +27,4 @@ properties:
     #DB_USERNAME: wordpress
     MYSQL_PASSWORD:
       vault: MYSQL_PASSWORD_KEY
-    revision: 12
+    revision: 13
